@@ -9,8 +9,7 @@ API consumers that will request exchange rates.
 ### Requirements
 * The API client provides two ISO currency codes and receives their exchange rate
     - Example: When we provide `CAD CHF` codes we expect to receive `0.73`
-* Additionally, the exchange rate should contain a sign indicating the rate trend. The trend should be calculated as the average
-  deviation within the last 10 rates. A negative, positive or static sign is then added as a suffix to the exchange rate value
+* Additionally, the exchange rate should contain a sign indicating the rate trend. The trend should be calculated as the deviation between the current rate and average of the last 10 rates (calculation should be simple, avoid usage of statistics formulas). A negative, positive or static sign is then added as a suffix to the exchange rate value
     - Example `0,73 ↑` or `0,73 ↓` or `0,73 -`
 
 ### Must haves
